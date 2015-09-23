@@ -32,6 +32,8 @@ proguard/
 ### Example user template
 
 # IntelliJ project files
+*.zip
+*.rar
 .idea
 *.iml
 out
