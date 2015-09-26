@@ -1,28 +1,19 @@
 package com.example.datetimedialog;
 
-import java.util.Calendar;
-
 import android.app.Activity;
-import android.app.ActionBar;
 import android.app.DatePickerDialog;
 import android.app.DatePickerDialog.OnDateSetListener;
-import android.app.Fragment;
 import android.app.TimePickerDialog;
 import android.app.TimePickerDialog.OnTimeSetListener;
-import android.content.Context;
-import android.content.DialogInterface;
-import android.content.DialogInterface.OnClickListener;
 import android.os.Bundle;
-import android.view.LayoutInflater;
 import android.view.Menu;
-import android.view.MenuItem;
 import android.view.View;
-import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.DatePicker;
 import android.widget.TextView;
 import android.widget.TimePicker;
-import android.os.Build;
+
+import java.util.Calendar;
 
 public class MainActivity extends Activity implements android.view.View.OnClickListener{
 
@@ -41,8 +32,8 @@ public class MainActivity extends Activity implements android.view.View.OnClickL
         tv_time=(TextView) findViewById(R.id.tv_time);
         date_button.setOnClickListener(this);
         time_button.setOnClickListener(this);
-        //»ñÈ¡µ±Ç°µÄÄêÔÂÈÕÊ±·ÖĞÅÏ¢
-        calendar=Calendar.getInstance();
+		//è·å–å½“å‰çš„å¹´æœˆæ—¥æ—¶åˆ†ä¿¡æ¯
+		calendar=Calendar.getInstance();
 	}
 
 	@Override
@@ -60,7 +51,7 @@ public class MainActivity extends Activity implements android.view.View.OnClickL
 			public void onDateSet(DatePicker view, int year, int monthOfYear,
 					int dayOfMonth) {
 				// TODO Auto-generated method stub
-				tv_date.setText("ÏÖÔÚÈÕÆÚ£º"+year+"-"+(monthOfYear+1)+"-"+dayOfMonth);
+				tv_date.setText("ç°åœ¨æ—¥æœŸï¼š" + year + "-" + (monthOfYear + 1) + "-" + dayOfMonth);
 			}
 		}, calendar.get(Calendar.YEAR), calendar.get(Calendar.MONTH), calendar.get(Calendar.DAY_OF_MONTH));
 		
@@ -74,7 +65,7 @@ public class MainActivity extends Activity implements android.view.View.OnClickL
 			@Override
 			public void onTimeSet(TimePicker view, int hourOfDay, int minute) {
 				// TODO Auto-generated method stub
-				tv_time.setText("ÏÖÔÚÊ±¼ä£º"+hourOfDay+":"+minute);
+				tv_time.setText("ç°åœ¨æ—¶é—´ï¼š" + hourOfDay + ":" + minute);
 			}
 		}, calendar.get(Calendar.HOUR_OF_DAY), calendar.get(Calendar.MINUTE), true);
 		time_dialog.show();
