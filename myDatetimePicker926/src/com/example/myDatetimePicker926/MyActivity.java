@@ -16,6 +16,7 @@ public class MyActivity extends Activity {
     private TimePicker timePicker;
     private DatePicker datePicker;
     private Calendar calendar;
+    //what?
     private int year, month, day, hour, minute;
 
 
