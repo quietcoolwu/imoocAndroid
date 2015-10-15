@@ -3,12 +3,7 @@
               android:orientation="vertical"
               android:layout_width="fill_parent"
               android:layout_height="fill_parent"
-        >
-    <TextView
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:text="Hello World, MyActivity"
-            />
+              android:weightSum="1">
     <ProgressBar
             style="?android:attr/progressBarStyleLarge"
             android:layout_width="wrap_content"
@@ -23,10 +18,42 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/progressBar3"/>
+
+
     <ProgressBar
-            style="?android:attr/progressBarStyleHorizontal"
+            android:max="100"
+            android:progress="50"
+            android:secondaryProgress="80"
+            style="@android:style/Widget.ProgressBar.Horizontal"
+            android:progressDrawable="@drawable/progress_bar"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/progressBar4"/>
+    <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/add"
+            android:id="@+id/add"/>
+    <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/reduce"
+            android:id="@+id/reduce"/>
+    <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/reset"
+            android:id="@+id/reset"/>
+    <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/showDialogProgress"
+            android:id="@+id/show"/>
+    <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:id="@+id/textView"
+            />
 </LinearLayout>
 
