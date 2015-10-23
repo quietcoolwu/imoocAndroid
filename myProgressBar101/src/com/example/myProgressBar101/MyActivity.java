@@ -95,6 +95,7 @@ public class MyActivity extends Activity implements View.OnClickListener {
             case R.id.show: {
                 /*
                 progressdialog的基础页面显示风格
+                what?
                  */
                 //新建progressdialog对象
                 progressDialog = new ProgressDialog(MyActivity.this);
